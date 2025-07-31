@@ -10,9 +10,9 @@ const Toaster = ({ ...props }: React.ComponentProps<typeof Sonner>) => {
       richColors
       toastOptions={{
         classNames: {
-          icon: "hidden",
-          toast: "font-sans"
-        }
+          icon: "!hidden",
+          toast: "font-sans",
+        },
       }}
       {...props}
     />
