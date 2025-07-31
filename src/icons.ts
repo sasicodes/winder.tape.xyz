@@ -11,6 +11,7 @@ import {
   CarIcon,
   CaretDownIcon,
   CaretLeftIcon,
+  GithubLogoIcon,
   CaretRightIcon,
   CaretUpIcon,
   CassetteTapeIcon,
@@ -182,6 +183,7 @@ const USED_ICONS = [
   { Icon: XLogoIcon, name: "XLogo" },
   { Icon: DiscordLogoIcon, name: "DiscordLogo" },
   { Icon: SignOutIcon, name: "SignOut" },
+  { Icon: GithubLogoIcon, name: "GithubLogo" },
 ];
 
 export {
@@ -196,6 +198,7 @@ export {
   SlidersIcon,
   ArrowRightIcon,
   NewspaperIcon,
+  GithubLogoIcon,
   SuitcaseSimpleIcon,
   CopyrightIcon,
   MicrophoneIcon,
