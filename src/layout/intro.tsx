@@ -22,7 +22,7 @@ export const IntroSection = () => {
               dragConstraints={{ top: 10, bottom: 10, left: 10, right: 10 }}
               dragTransition={{
                 bounceDamping: 20,
-                bounceStiffness: 600
+                bounceStiffness: 600,
               }}
               initial={{ opacity: 0, translateY: "50%", rotateX: -45 }}
               animate={{ opacity: 1, translateY: 0, rotateX: 0 }}
@@ -30,7 +30,7 @@ export const IntroSection = () => {
                 type: "spring",
                 bounce: 0,
                 duration: 0.3,
-                delay: index * 0.05
+                delay: index * 0.05,
               }}
             >
               {char}

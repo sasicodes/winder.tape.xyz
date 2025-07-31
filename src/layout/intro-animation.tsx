@@ -12,17 +12,17 @@ const AnimatedRect = (props: SVGProps<SVGRectElement> & MotionProps) => {
       dragConstraints={{ top: 10, bottom: 10, left: 10, right: 10 }}
       dragTransition={{
         bounceDamping: 20,
-        bounceStiffness: 600
+        bounceStiffness: 600,
       }}
       animate={{
         x: 0,
         y: 0,
         opacity: 1,
         transition: {
-          bounce: 0,
-          duration: 0.3,
-          type: "spring"
-        }
+          delay: 0.1,
+          duration: 1,
+          type: "spring",
+        },
       }}
       {...props}
     />
@@ -56,7 +56,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         y: 0,
-        x: 50
+        x: 50,
       }}
     />
     <AnimatedRect
@@ -68,7 +68,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -80,7 +80,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: -50
+        y: -50,
       }}
     />
     <AnimatedRect
@@ -92,7 +92,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 0,
-        y: -50
+        y: -50,
       }}
     />
     <AnimatedRect
@@ -104,7 +104,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: -50
+        y: -50,
       }}
     />
     <AnimatedRect
@@ -117,7 +117,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 0,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -129,7 +129,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 0,
-        y: -50
+        y: -50,
       }}
     />
     <AnimatedRect
@@ -141,7 +141,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: -50,
-        y: -50
+        y: -50,
       }}
     />
     <m.rect
@@ -164,7 +164,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: -50,
-        y: 0
+        y: 0,
       }}
     />
     <AnimatedRect
@@ -176,7 +176,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: -50,
-        y: 0
+        y: 0,
       }}
     />
     <AnimatedRect
@@ -188,7 +188,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: -50,
-        y: -50
+        y: -50,
       }}
     />
     <AnimatedRect
@@ -200,7 +200,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 0,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -212,7 +212,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -224,7 +224,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -236,7 +236,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: 50,
-        y: 50
+        y: 50,
       }}
     />
     <AnimatedRect
@@ -248,7 +248,7 @@ export const IntroAnimation = () => (
       initial={{
         opacity: 0,
         x: -50,
-        y: 50
+        y: 50,
       }}
     />
     <defs>
