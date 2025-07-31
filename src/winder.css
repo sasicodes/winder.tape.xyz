@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/sans.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EditorialNew";
+  src: url("/fonts/serif.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GeistMono";
+  src: url("/fonts/mono.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@plugin "@vidstack/react/tailwind.cjs";
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+/* Custom no-scrollbar utility */
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@layer base {
+  :root {
+    --tape-font-sans: "Inter", ui-sans-serif, system-ui, -apple-system,
+      sans-serif;
+    --tape-font-serif: "EditorialNew", ui-serif, serif;
+    --tape-font-mono: "GeistMono", ui-monospace, monospace;
+
+    --radius: 9px;
+    --upbyte: 15 100% 64;
+    --scrollbar-thumb: #c7c7c7;
+    --border-strong: #e4e5ea;
+    --shadow: 0 0 0 1px #ffffff17, 0 1px 1px #0000000a, 0 4px 8px -4px #00000014,
+      0 16px 24px -8px #0000001f;
+
+    --site-background: 0 0% 95%;
+    --primary: 0 0% 0%;
+    --secondary: 0, 0%, 0%, 0.04;
+    --destructive: 0 100% 49%;
+    --theme: 0 0% 100%;
+    --border: 0, 0%, 0%, 0.06;
+    --divider: 0, 0%, 0%, 0.1;
+    --text-muted: 0, 0%, 0%, 0.4;
+  }
+
+  .dark {
+    --scrollbar-thumb: #4d4d4d;
+    --border-strong: #23232a;
+
+    --site-background: 0 0% 16%;
+    --primary: 0 0% 100%;
+    --secondary: 0, 0%, 100%, 0.1;
+    --destructive: 359 100% 61%;
+    --theme: 0 0% 0%;
+    --border: 0, 0%, 100%, 0.1;
+    --divider: 0, 0%, 100%, 0.1;
+    --text-muted: 0, 0%, 100%, 0.4;
+  }
+}
+
+@theme {
+  /* Font families */
+  --font-sans: var(--tape-font-sans);
+  --font-serif: var(--tape-font-serif);
+  --font-mono: var(--tape-font-mono);
+
+  /* Colors */
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-destructive: hsl(var(--destructive));
+  --color-upbyte: hsl(var(--upbyte));
+  --color-theme: hsl(var(--theme));
+
+  /* Background colors */
+  --background-color-site: hsl(var(--site-background));
+
+  /* Border colors */
+  --border-color-custom: hsl(var(--border));
+  --border-color-strong: var(--border-strong);
+  --divide-color-custom: hsl(var(--divider));
+  --ring-color-custom: hsl(var(--border));
+
+  /* Shadows */
+  --shadow-custom: var(--shadow);
+
+  /* Text colors */
+  --text-color-muted: hsl(var(--text-muted));
+
+  /* Border radius */
+  --radius-custom: var(--radius);
+  --radius-card-sm: calc(var(--radius) + 6px);
+  --radius-card: calc(var(--radius) + 11px);
+
+  /* Breakpoints */
+  --breakpoint-3xl: 1800px;
+
+  /* Transition Properties */
+  --transition-property-filter: filter;
+
+  /* Animations */
+  --animate-shimmer: shimmer 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes shimmer {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+}
+
+* {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+html {
+  font-family: var(--tape-font-sans);
+  @apply scroll-smooth bg-site antialiased text-primary;
+}
+
+button {
+  @apply cursor-pointer;
+}
