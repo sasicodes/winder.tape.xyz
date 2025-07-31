@@ -39,6 +39,16 @@ export const Sidebar = () => {
         {COMPONENTS.map((item) => (
           <Li key={item.id} item={item} />
         ))}
+        <li className="py-1">
+          <a
+            className="-mx-3 group inline-block relative px-3 py-2 text-primary/70 hover:text-primary transition-colors duration-300"
+            href="https://sasi.codes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            With ❤︎ by sasicodes
+          </a>
+        </li>
       </ul>
     </aside>
   );
