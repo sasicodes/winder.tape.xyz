@@ -20,7 +20,7 @@ const AnimatedRect = (props: SVGProps<SVGRectElement> & MotionProps) => {
         opacity: 1,
         transition: {
           delay: 0.3,
-          duration: 2,
+          duration: 1.3,
           type: "spring",
         },
       }}
